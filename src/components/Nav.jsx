@@ -2,6 +2,7 @@
 import { NavLink, useLocation, useParams } from "react-router-dom"
 import Back from "./Back"
 import Buscador from "./Buscador"
+import logo from '/img/logo.png';
 
 const Nav = () => {
   // const [showBack, setShowBack] = useState(true)
@@ -19,7 +20,7 @@ const Nav = () => {
   }
   }>
      
-        <h1><img src={'../../public/img/logo.png'} width={200} alt="logo rick & Morty" /></h1>
+        <h1><img src={logo} width={200} alt="logo rick & Morty" /></h1>
      
       <div>
 

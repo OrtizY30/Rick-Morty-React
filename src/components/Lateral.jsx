@@ -40,7 +40,7 @@ const Lateral = () => {
                         <option value="">...</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
-                        <option value="genderless">Genderless</option>
+                        <option value="Genderless">Genderless</option>
                         <option value="unknown">Unknown</option>
 
                     </select>
@@ -52,7 +52,7 @@ const Lateral = () => {
                     <select name="status" id="status" onChange={({target: {value}}) => buscarStatus(value)}>
                         <option value="">...</option>
                         <option value="Alive">Alive</option>
-                        <option value="Death">Death</option>
+                        <option value="Dead">Dead</option>
                     </select>
                 </div>
 

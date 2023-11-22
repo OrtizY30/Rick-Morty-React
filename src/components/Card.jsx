@@ -17,8 +17,8 @@ const card = ({ imagen, name, status, gender, species, active, id }) => {
 
           <h2>{name}</h2>
 
-          <div className={`status ${status === 'Alive' ? 'alive' : 'death'}`} >
-          {`${status === 'Alive' ? 'Alive' : 'Death'}`}
+          <div className={`status ${status === 'Alive' ? 'alive' : 'dead'}`} >
+          {`${status === 'Alive' ? 'Alive' : 'dead'}`}
           </div>
           {/* <p><strong>Gender:</strong> {gender}</p>
           <p><strong>Specie:</strong> {species}</p> */}
