@@ -500,11 +500,19 @@
      }
     
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 452px){
     .subContainer{
         margin: 4pc auto;
         padding-left: 20px;
         /* width: 90%; */
         gap: 10px;
+    }
+    .status{
+        right: 10px;
+        top: 10px;
+
+    }
+    .tarjeta img{
+        width: 80%;
     }
 }
