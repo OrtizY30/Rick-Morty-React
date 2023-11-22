@@ -21,7 +21,7 @@ const Nav = () => {
   }
   }>
         
-        <img src={logo} width={200} alt="logo rick & Morty" />
+        <img className="logoImg" src={logo} width={200} alt="logo rick & Morty" />
         <div className="menuDes">
           <MenuHam/>
         </div>
