@@ -2,7 +2,8 @@
 
 import { useContext } from 'react'
 import { ApiRick } from '../context/ApiContext'
-import Nav from './Nav'
+import prevImg from '/img/prev.svg'
+import nextImg from '/img/next.svg'
 
 
 const CambioPage = () => {
@@ -21,12 +22,12 @@ const CambioPage = () => {
     <div id='box_page'>
         <a href={'#header'}>
       <div className='page' onClick={menos}  >
-        <img src={'../../public/img/prev.svg'}  alt="" />
+        <img src={prevImg}  alt="" />
       </div>
         </a>
      
       <div className='page' onClick={mas}   >
-      <img src={'../../public/img/next.svg'}  alt="" />
+      <img src={nextImg}  alt="" />
       </div>
     </div>
   )

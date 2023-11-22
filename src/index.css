@@ -29,6 +29,106 @@
     overflow-y: scroll;
 }
 
+/* Estilos del menu hamburguesa */
+.menuDes{
+    display: none;
+    /* position: absolute; */
+    padding: 10px;
+    /* position: relative; */
+}
+.menuH{
+    display: none;
+}
+
+
+.hide{
+    transform: translateY(-250%);
+    transition: all 1s ease-in-out;
+    position: absolute;
+    /* top: 3pc; */
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444;
+}
+.show{
+    transform: translateY(0%);
+    transition: all 1s ease-in-out;
+    position: absolute;
+    /* top: 3pc; */
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444;
+    
+}
+#checkbox {
+    display: none;
+    
+  }
+  
+  .toggle {
+    position: absolute;
+    z-index: 10;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+    transform: rotate(90deg);
+  }
+  
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  #bar2 {
+    transition-duration: .8s;
+  }
+  
+  #bar1,#bar3 {
+    width: 70%;
+  }
+  
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }
+/* Estilos de la cabecera */
 #header {
     position: fixed;
     top: 0;
@@ -116,6 +216,7 @@
 .modo {
     cursor: pointer;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .white {
@@ -136,6 +237,19 @@
     right: 10px;
     top: 4pc;
     z-index: 1;
+}
+.option-aside h2{
+    color: rgb(0, 255, 145);
+    font-family: 'Gloria Hallelujah', 'cursive'
+
+}
+.option-aside select{
+    width: 100%;
+    background: #0000002e;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    border: 2px solid blue;
 }
 /* Estilos del contenedor de las tarjetas */
 
@@ -300,4 +414,73 @@
 .cargando {
     color: white;
     font-size: 60px;
+}
+
+@media screen and (max-width: 1054px) {
+    .aside{
+        display: none;
+    }
+    
+    .menuDes{
+        display: block;
+    }
+     .option-aside{
+       display: flex;
+       flex-direction: row;
+       gap: 20px;
+       width: 100%;
+    }
+    .menuDes select{
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+        
+        #Search {
+            width: 100%;
+        }
+        .subContainer {      
+            width: 90%;
+        }
+}
+@media screen and (max-width: 650px){
+    .nav img{
+        display: none;
+    }
+    .menuDes h1{
+        display: none;
+    }
+    .hide{
+        transform: translateX(-100%);
+        transition: all 1s ease-in-out;
+       
+        display: flex;
+        flex-direction: column;
+        background-color: #444;
+        
+    }
+    .show{
+        transform: translateX(0%);
+        transition: all 1s ease-in-out;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #444;
+        width: 200px;
+        
+    }
+    .menuH{
+        display: block;
+    }
+   
+    .option-aside{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 200px;
+     }
+     .footer img{
+        display: none;
+     }
+    
 }

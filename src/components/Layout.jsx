@@ -1,14 +1,11 @@
 import { useContext, useState } from 'react'
 import '../App.css'
 import Card from './Card'
-// import { ApiRick } from './context/ApiContext'
 import Nav from './Nav'
-import Footer from './Footer'
 import CambioPage from './CambioPage'
 import { ApiRick } from '../context/ApiContext'
-import Buscador from './Buscador'
 import Lateral from './Lateral'
-
+import logoRick from '/img/rickmorty.png'
 const Layout = () => {
 
     const { data } = useContext(ApiRick)
@@ -37,7 +34,7 @@ const Layout = () => {
             </div>
             <CambioPage/>
             <div className='footer'>
-            <h1><img src={'../../public/img/rickmorty.png'} width={250} alt="logo rick & Morty" /></h1>
+            <h1><img src={logoRick} width={250} alt="logo rick & Morty" /></h1>
            
             </div>
         </div>

@@ -3,6 +3,7 @@ import { NavLink, useLocation, useParams } from "react-router-dom"
 import Back from "./Back"
 import Buscador from "./Buscador"
 import logo from '/img/logo.png';
+import MenuHam from "./MenuHam";
 
 const Nav = () => {
   // const [showBack, setShowBack] = useState(true)
@@ -19,9 +20,11 @@ const Nav = () => {
       width:'100%'
   }
   }>
-     
-        <h1><img src={logo} width={200} alt="logo rick & Morty" /></h1>
-     
+        
+        <img src={logo} width={200} alt="logo rick & Morty" />
+        <div className="menuDes">
+          <MenuHam/>
+        </div>
       <div>
 
       {location.pathname === `/${id}` ? ( <NavLink to={'/'}> <Back />  </NavLink>) :

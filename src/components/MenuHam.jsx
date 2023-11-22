@@ -1,9 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 import { ApiRick } from '../context/ApiContext'
 
 
-const Lateral = () => {
+const MenuHam = () => {
+    const [show, setShow] = useState(false)
+    const showMenu = () =>{
+        setShow(!show)
+    }
+
     const {GetData,
         setGenderParam,
         setStatusParam,
@@ -22,24 +27,31 @@ const Lateral = () => {
             GetData();
         }
     return (
-        <aside className='aside'
-        style={{
-            // borderLeft: '3px solid #ccc',
-            padding: '10px',
-            // height: '100%', background: '#eee'
-        }}>
-            <h1 style={{
+        <>
+        <div className='containerMenu' >
+          
+            <div id='menuH' >
+        {/* <p>|</p> <p>|</p> <p>|</p> */}
+        
+      <input type="checkbox" id="checkbox" onClick={showMenu} />
+      <label htmlFor="checkbox" className="toggle">
+        <div className="bars" id="bar1"></div>
+        <div className="bars" id="bar2"></div>
+        <div className="bars" id="bar3"></div>
+      </label>
+      </div>
+        <h1 style={{
                 textAlign: 'center',
                 fontSize: '28px',
                 fontWeight: 'bold',
                 fontFamily: 'Gloria Hallelujah, cursive',
-                borderBottom: '2px solid #ccc',
+               
             }}>FILTER</h1>
+        </div>
+        <aside className={`${show ? 'show' : 'hide'}`}>
+           
             
-            <div className='box-aside' style={{
-                display: 'flex',
-                flexDirection: 'column'
-            }}>
+        
 
                 <div className='option-aside'>
                     <h2>GENDER</h2>
@@ -81,10 +93,11 @@ const Lateral = () => {
                     </select>
                 </div>
 
-            </div>
+         
 
         </aside>
+        </>
     )
 }
 
-export default Lateral
+export default MenuHam
