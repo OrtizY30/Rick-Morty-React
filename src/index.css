@@ -485,19 +485,26 @@
         transform: translateX(-9%);
         transition: all 1s ease-in-out;
         left: 0;
-        
-        
     }
-
-   
     .option-aside{
         display: flex;
         flex-direction: column;
         gap: 20px;
         width: 200px;
      }
+     .tarjeta h2{
+        font-size: 10px;
+     }
      .footer img{
         display: none;
      }
     
+}
+@media screen and (max-width: 390px){
+    .subContainer{
+        margin: 4pc auto;
+        padding-left: 20px;
+        /* width: 90%; */
+        gap: 10px;
+    }
 }
