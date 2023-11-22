@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    /* /* font-family: 'Outfit', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Tektur', sans-serif; */
+}
+
+.general {
+    height: 100vh;
+    /* background-color: #242833; */
+    overflow: hidden;
+    background-image: url('../public/img/fondo2.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+
+    background-image: url('../public/img/fondo2.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    /* background-image: url('../public/img/fondo2.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+
+#header nav a {
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: rgb(0, 255, 145);
+}
+
+#header {
+    gap: 20px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: rgb(0, 255, 145);
+
+}
+
+/* Estilos de buscador */
+#Search {
+    background: #ccc;
+    border: none;
+    padding: 8px 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 400px;
+    /* border: 2px solid  rgb(0, 81, 255); */
+
+}
+
+#Search:focus {
+    outline:auto blue;
+    color: #444;
+}
+
+.footer {
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    left: -20px;
+
+}
+
+/* Estilos del Scroll */
+
+.container::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.container::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.container::-webkit-scrollbar-button:increment,
+.container::-webkit-scrollbar-button {
+    display: none;
+}
+
+.container::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.container::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Estilos del modo oscuro y claro */
+.modo {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.white {
+    background-color: #cccccc8d;
+    /* color: white; */
+}
+
+.black {
+    background-color: #444444af;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    color: white;
+}
+/* Estilos del aside lateral */
+
+.aside{
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 4pc;
+    z-index: 1;
+}
+/* Estilos del contenedor de las tarjetas */
+
+.subContainer {
+    font-family: 'Kanit', sans-serif;
+    width: 70%;
+    margin: 7pc auto 1pc;
+
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: 1;
+}
+
+/* Estilos de las tarjetas de personajes */
+
+.tarjeta {
+    border: 2px solid rgb(0, 81, 255);
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    /* width: 250px; */
+    width: 30%;
+    height: auto;
+
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(227, 224, 224);
+    overflow: hidden;
+}
+
+
+.tarjeta img {
+    width: 90%;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+.tarjeta img:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta .info {
+    text-align: left;
+    /* background-color: rgba(255, 255, 255, 0.445); */
+    padding: 10px;
+}
+
+.status {
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.alive {
+    background: green;
+}
+
+.death {
+    background: red;
+}
+
+.verde {
+    box-shadow: 0px 0px 35px rgb(10, 255, 6);
+}
+
+.red {
+    box-shadow: 0px 0px 35px rgb(255, 72, 6);
+}
+
+
+
+/* Estilos del paginador */
+
+#box_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.page {
+    background-color: #ccc;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 8px; 
+    box-shadow: inset 0px 0px 10px #444;
+    cursor: pointer;
+    transition: all 300 ease;
+}
+
+.page:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de la tarjetas individuales */
+
+.container-personaje {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+
+.container-card {
+    width: 290px;
+    height: auto;
+    margin-top: -3pc;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Tektur', sans-serif; */
+    color: white;
+    border: 2px solid rgb(0, 81, 255);
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(227, 224, 224);
+    overflow: hidden;
+    background-color: #24283385;
+
+
+}
+
+.container-card .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 18px;
+    /* padding: 10px; */
+    text-align: left;
+
+}
+
+.container-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+.container-card strong {
+    color: rgb(60, 252, 7);
+}
+
+.cargando {
+    color: white;
+    font-size: 60px;
+}
