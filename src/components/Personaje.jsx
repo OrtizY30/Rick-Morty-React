@@ -59,7 +59,7 @@ const Personaje = () => {
                     </>
                 ) :
                     <>
-                    <h1 className='cargando'>Cargando...</h1>
+                    <h1 className='cargando'>Loading...</h1>
                     </>
                 }
             </div>

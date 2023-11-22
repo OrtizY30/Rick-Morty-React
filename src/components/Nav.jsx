@@ -20,10 +20,13 @@ const Nav = () => {
       width:'100%'
   }
   }>
-        
-        <img className="logoImg" src={logo} width={200} alt="logo rick & Morty" />
-        <div className="menuDes">
-          <MenuHam/>
+        <div className="logoImg">
+
+        <img  src={logo} width={200} alt="logo rick & Morty" />
+        </div>
+        <div className="menuDes" >
+          { location.pathname === `/${id}` ? <img  src={logo} width={200} alt="logo rick & Morty" /> : <MenuHam/> }
+          
         </div>
       <div>
 

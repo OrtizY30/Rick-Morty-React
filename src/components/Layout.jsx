@@ -6,19 +6,24 @@ import CambioPage from './CambioPage'
 import { ApiRick } from '../context/ApiContext'
 import Lateral from './Lateral'
 import logoRick from '/img/rickmorty.png'
+import logo from '/img/logo.png'
 const Layout = () => {
 
     const { data } = useContext(ApiRick)
     const [active, setActive] = useState(true)
     return (
         <div className='container'>
-            <header id='header'>
+                    <img className='logoH' src={logo} width='280' alt="" />
+            <header className='header' >
+                <div id='header'>
+
                 <Nav />
 
                 <div >
                 {/* <Buscador/> */}
                 <div className='modo' onClick={() => setActive(!active)}>
                     <strong>MODO</strong>
+                </div>
                 </div>
                 </div>
 

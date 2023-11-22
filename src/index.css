@@ -56,6 +56,9 @@
 .imgH{
     display: none;
 }
+.logoH{
+    display: none;
+}
 .hide{
     transform: translateY(-250%);
     transition: all 1s ease-in-out;
@@ -444,6 +447,11 @@
         }
 }
 @media screen and (max-width: 650px){
+    #header{
+        display: flex;
+        /* flex-direction: column; */
+        top: 5pc;
+    }
     .menuDes{
         position: relative;
     }
@@ -495,12 +503,21 @@
      .tarjeta h2{
         font-size: 10px;
      }
+     .container-card{
+        margin-top: -6pc;
+     }
      .footer img{
         display: none;
      }
     
 }
 @media screen and (max-width: 452px){
+    
+    .logoH{
+        display: block;
+        margin: 0 auto;
+
+    }
     .subContainer{
         margin: 4pc auto;
         padding-left: 20px;
